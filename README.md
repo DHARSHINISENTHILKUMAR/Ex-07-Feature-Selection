@@ -18,6 +18,7 @@ Save the data to the file
 
 
 # CODE
+~~~
 from sklearn.datasets import load_boston boston_data=load_boston() import pandas as pd boston = pd.DataFrame(boston_data.data, columns=boston_data.feature_names) boston['MEDV'] = boston_data.target dummies = pd.get_dummies(boston.RAD) boston = boston.drop(columns='RAD').merge(dummies,left_index=True,right_index=True) X = boston.drop(columns='MEDV') y = boston.MEDV boston.head(10)
 
 from sklearn.preprocessing import StandardScaler from sklearn.pipeline import make_pipeline from sklearn.model_selection import KFold from sklearn.neighbors import KNeighborsRegressor from sklearn.metrics import mean_squared_error, r2_score from sklearn.model_selection import cross_val_predict from sklearn.linear_model import LinearRegression from math import sqrt
@@ -37,6 +38,7 @@ print(features)
 y_pred = cross_val_predict(classifier_pipeline, X, y, cv=cv)
 print("RMSE: " + str(round(sqrt(mean_squared_error(y,y_pred)),2)))
 print("R_squared: " + str(round(r2_score(y,y_pred),2)))
+~~~
 # Feature Selection Using a Wrapper
 ~~~
 boston = pd.DataFrame(boston_data.data, columns=boston_data.feature_names) boston['MEDV'] = boston_data.target boston['RAD'] = boston['RAD'].astype('category') dummies = pd.get_dummies(boston.RAD) boston = boston.drop(columns='RAD').merge(dummies,left_index=True,right_index=True) X = boston.drop(columns='MEDV') y = boston.MEDV

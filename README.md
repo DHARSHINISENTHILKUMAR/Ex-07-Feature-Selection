@@ -67,4 +67,8 @@ X = boston.drop(columns='MEDV')[['CRIM','RM','PTRATIO','LSTAT']] y_pred = cross_
 ~~~
 # Output:
 ![image](https://github.com/DHARSHINISENTHILKUMAR/Ex-07-Feature-Selection/assets/113699377/e813db6e-46c7-4f96-9422-b73871363112)
+![image](https://github.com/DHARSHINISENTHILKUMAR/Ex-07-Feature-Selection/assets/113699377/956db772-5695-4034-91af-c31975889467)
+![image](https://github.com/DHARSHINISENTHILKUMAR/Ex-07-Feature-Selection/assets/113699377/8ddb52b3-75f1-4544-b80b-21443a03c397)
+![image](https://github.com/DHARSHINISENTHILKUMAR/Ex-07-Feature-Selection/assets/113699377/38dccf10-6ead-4c48-a3e3-8204a778ea5d)
+
 
